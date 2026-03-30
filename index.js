@@ -1,4 +1,3 @@
-// your code goes here
 const API_KEY = 'affb8f39b23fb787a467af8a045faeab';
 
 async function getWeather() {
