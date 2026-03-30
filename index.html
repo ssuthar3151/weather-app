@@ -9,15 +9,30 @@
 <body>
     <div class="container">
         <header>
-            <h1>Weather App</h1>
+            <div class="header-content">
+                <h1>Weather App</h1>
+                <button id="themeToggle" class="theme-btn" onclick="toggleTheme()">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
         </header>
         <main>
-            <div class="weather-card">
-                <img src="weather-icon.png" alt="Weather Icon" class="weather-icon">
-                <h2 class="location">City, Country</h2>
+            <div class="search-container">
+                <input type="text" id="cityInput" placeholder="Enter city name..." class="search-input">
+                <button onclick="getWeather()" class="search-btn">Search</button>
+            </div>
+            <div id="error" class="error hidden">City not found. Try again.</div>
+            <div id="weatherInfo" class="weather-card hidden">
+                <img id="icon" src="" alt="Weather Icon" class="weather-icon">
+                <h2 id="cityName" class="location"></h2>
+                <p id="description" class="condition"></p>
                 <div class="weather-details">
-                    <p class="temperature">25 °C</p>
-                    <p class="condition">Sunny</p>
+                    <p class="temperature"><span id="temp"></span></p>
+                    <div class="details">
+                        <div><span id="humidity"></span><br/>Humidity</div>
+                        <div><span id="wind"></span><br/>Wind</div>
+                        <div><span id="feelsLike"></span><br/>Feels Like</div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -25,5 +40,6 @@
             <p>Weather data provided by OpenWeather API</p>
         </footer>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
