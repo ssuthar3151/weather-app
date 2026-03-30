@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 36px 32px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  color: #a8d8ea;
+}
+
+.search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.search input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.search input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #a8d8ea;
+  color: #1a1a2e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search button:hover {
+  background: #79c2d8;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.weather {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.icon-temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.icon-temp img {
+  width: 64px;
+  height: 64px;
+}
+
+.icon-temp span {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#cityName {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+#description {
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 14px 10px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.details span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
