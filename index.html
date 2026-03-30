@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather App</title>
 </head>
 <body>
-  <div class="card">
-    <h1>Weather App</h1>
-    <div class="search">
-      <input type="text" id="cityInput" placeholder="Enter city name..." />
-      <button onclick="getWeather()">Search</button>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+        </header>
+        <main>
+            <div class="weather-card">
+                <img src="weather-icon.png" alt="Weather Icon" class="weather-icon">
+                <h2 class="location">City, Country</h2>
+                <div class="weather-details">
+                    <p class="temperature">25 °C</p>
+                    <p class="condition">Sunny</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Weather data provided by OpenWeather API</p>
+        </footer>
     </div>
-    <div id="error" class="error hidden">City not found. Try again.</div>
-    <div id="weatherInfo" class="weather hidden">
-      <div class="icon-temp">
-        <img id="icon" src="" alt="weather icon" />
-        <span id="temp"></span>
-      </div>
-      <h2 id="cityName"></h2>
-      <p id="description"></p>
-      <div class="details">
-        <div><span id="humidity"></span><br/>Humidity</div>
-        <div><span id="wind"></span><br/>Wind</div>
-        <div><span id="feelsLike"></span><br/>Feels Like</div>
-      </div>
-    </div>
-  </div>
-  <script src="index.js"></script>
 </body>
 </html>
